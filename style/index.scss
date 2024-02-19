@@ -1,0 +1,48 @@
+@import "./variables";
+@import "./placeholders";
+@import "./mixins";
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  min-width: 0;
+  min-height: 0;
+}
+
+img {
+  border-style: none;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  color: var(--font-color);
+  font-family: var(--font-family);
+  @include grid(
+    $rows: repeat(auto-fill, 10vh),
+    $columns: repeat(9, auto),
+    $row-gap: 20px,
+    $column-gap: 10px
+  );
+}
+
+h1 {
+  font-size: $h1-size-mobile;
+  text-align: center;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: $section-title-size-mobile;
+  font-weight: 100;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 600;
+}

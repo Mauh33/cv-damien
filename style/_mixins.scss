@@ -1,0 +1,61 @@
+@import "./variables";
+
+@mixin grid(
+  $rows: null,
+  $columns: null,
+  $gap: null,
+  $row-gap: null,
+  $column-gap: null
+) {
+  @if ($columns) {
+    display: grid;
+
+    @if ($gap) {
+      gap: $gap;
+    } @else {
+      row-gap: $row-gap;
+      column-gap: $column-gap;
+    }
+
+    grid-template-rows: $rows;
+    grid-template-columns: ($columns);
+  } @else {
+    display: grid;
+
+    @if ($gap) {
+      gap: $gap;
+    } @else {
+      row-gap: $row-gap;
+      column-gap: $column-gap;
+    }
+
+    grid-template-rows: $rows;
+  }
+}
+
+@mixin flexbox(
+  $direction: row,
+  $wrap: nowrap,
+  $justify: center,
+  $align: center,
+  $gap: 0,
+  $child-placeholder: null
+) {
+  display: flex;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin from($media) {
+  @if $media == md {
+    @media only screen and (min-width: ($max-xs + 1)) {
+      @content;
+    }
+  } @else if $media == lg {
+    @media only screen and (min-width: ($max-sm + 1)) {
+      @content;
+    }
+  }
+}
