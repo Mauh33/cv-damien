@@ -39,12 +39,12 @@ header {
   grid-row: 1/6;
   @include flexbox(
     $direction: column,
-    $justify: center
+    $justify: flex-start
   )
 }
 
 h1 {
-  font-size: $h1-size-tablet;
+  font-size: $h1-size-mobile;
   font-family: $ft-h1;
   text-align: left;
   font-weight: 400;
@@ -91,10 +91,6 @@ section {
 .about-me {
 
   order: -1;
-  // @include flexbox (
-  //   $direction: column,
-  //   $justify: center,
-  // );
 
   p {
     margin-bottom: 15px
@@ -107,7 +103,7 @@ h3 {
   margin-bottom: 25px;
 }
 
-.about-me, .works {
+.about-me, section.works {
   width: auto;
   max-width: 340px;
 }
@@ -155,4 +151,76 @@ footer {
     $direction: column,
     $justify: space-evenly,
     )
+}
+
+@include from(lg) {
+
+  header {
+    flex-direction: row;
+    margin: auto;
+    margin-top: 80px;
+    width: 85%;
+    max-width: 800px;
+  }
+
+  .picture {
+    margin-top: unset;
+    margin-right: calc(4vw + 10px);
+    margin-left: 30px;
+    width: 40%;
+    height:100%;
+    max-width: 400px;
+    max-height: 500px;
+  }
+
+  .picture img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 139vw;
+  }
+
+  h1 {
+    font-size: (calc(3rem + 20px));
+    line-height: 105%;
+    font-weight: 550;
+    align-self: center;
+  }
+
+  .about-me, section.works {
+    width: 85%;
+    max-width: 800px;
+    margin: auto;
+  }
+
+  .about-me {
+    margin-bottom: 50px;
+  }
+
+  section .works {
+    margin: unset;
+    width: 100%;
+    display: block;
+  }
+
+  .work {
+    width: 45%;
+    display: inline-block;
+    height: auto;
+  }
+
+  .work:nth-child(odd) {
+    margin-right: 40px;
+  }
+
+  footer {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  footer div {
+    margin: 0 10px 30px;
+  }
+
 }
