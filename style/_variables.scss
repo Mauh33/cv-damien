@@ -15,16 +15,18 @@ $ft-large-desktop: 64px;
 // $section-title-size-mobile: 30px;
 // $section-title-size-tablet: 40px;
 // $section-title-size-desktop: 64px;
-// $h1-size-mobile: 40px;
-$h1-size-tablet: 83px;
+$h1-size-mobile: 83px;
+$h1-size-tablet: 60px;
 $h1-size-desktop: 110px;
 
 $h2 : 50px;
 
-$max-md: 576px;
-$max-lg: 992px;
+$max-md: 575px;
+$max-lg: 991px;
+$max-xl: false;
 
 $breakpoints: (
   md: $max-md,
   lg: $max-lg,
+  xl: $max-xl,
 );
