@@ -1,22 +1,25 @@
-:root {
-  --bg-color: white;
-  --font-color: #202020;
-  --secondary-color: #E4DCDC;
-  --footer-ft-color: #C1A8A8;
 
-  --font-family: 'Prata';
-}
+$bg-color : white;
+$ft-color: #202020;
+$secondary-color: #E4DCDC;
+$footer-ft-color: #C1A8A8;
+
+$ft-h1: 'Prata', serif;
+$ft-text: 'Barlow';
+$ft-tags: 'Work Sans';
 
 $ft-small-desktop: 24px;
 $ft-medium-desktop: 36px;
 $ft-large-desktop: 64px;
 
-$section-title-size-mobile: 30px;
-$section-title-size-tablet: 40px;
-$section-title-size-desktop: 64px;
-$h1-size-mobile: 40px;
-$h1-size-tablet: 70px;
+// $section-title-size-mobile: 30px;
+// $section-title-size-tablet: 40px;
+// $section-title-size-desktop: 64px;
+// $h1-size-mobile: 40px;
+$h1-size-tablet: 83px;
 $h1-size-desktop: 110px;
+
+$h2 : 50px;
 
 $max-md: 576px;
 $max-lg: 992px;
