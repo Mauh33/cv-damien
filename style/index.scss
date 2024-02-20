@@ -21,8 +21,8 @@ li {
 }
 
 body {
-  color: var(--font-color);
-  font-family: var(--font-family);
+  color: $ft-color;
+  font-family: $ft-text;
   @include grid(
     $rows: repeat(auto-fill, 10vh),
     $columns: repeat(9, auto),
@@ -31,18 +31,128 @@ body {
   );
 }
 
+header, main, footer {
+  grid-column: 2/9;
+}
+
+header {
+  grid-row: 1/6;
+  @include flexbox(
+    $direction: column,
+    $justify: center
+  )
+}
+
 h1 {
-  font-size: $h1-size-mobile;
-  text-align: center;
-  font-weight: 600;
+  font-size: $h1-size-tablet;
+  font-family: $ft-h1;
+  text-align: left;
+  font-weight: 400;
+  line-height: 80px;
+  margin-top: 15px;
+  align-self: flex-start;
+}
+
+main {
+  grid-row: 8/10;
+}
+
+h2, h3, p {
+  font-family: $ft-text;
+  font-weight: 500;
 }
 
 h2 {
-  font-size: $section-title-size-mobile;
-  font-weight: 100;
+  align-self: baseline;
+  font-size: $h2;
+  margin-bottom: 45px;
+  font-weight: 300;
+}
+
+.picture {
+  margin-top: 25px;
+}
+
+.picture img {
+  width: 350px;
+  height: 470px;
+  border-radius: 195px;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+.about-me {
+
+  order: -1;
+  // @include flexbox (
+  //   $direction: column,
+  //   $justify: center,
+  // );
+
+  p {
+    margin-bottom: 15px
+  }
 }
 
 h3 {
-  font-size: 20px;
+  font-weight: 680;
+  font-size: 28px;
+  margin-bottom: 25px;
+}
+
+.about-me, .works {
+  width: auto;
+  max-width: 340px;
+}
+
+.works {
+  margin-bottom: 30px;
+  order: 2;
+}
+
+.work {
+  margin-bottom: 20px;
+}
+
+.work p {
+  margin-bottom: 15px;
+}
+
+.tags {
+  width: 100%;
+  height: max-content;
+  margin-bottom: 35px;
+}
+
+.tags span {
+  display: inline-block;
+  text-align: center;
+  font-size: 10px;
+  font-family: $ft-tags;
+  width: fit-content;
+  border-radius: 20px;
+  height: 22px;
+  margin: 3px;
+  padding: 6px 15px;
+  background-color: $secondary-color;
+  color: $bg-color;
   font-weight: 600;
+}
+
+footer {
+  grid-row: 10/13;
+  height: 160px;
+  color: $footer-ft-color;
+  font-weight: 600;
+  @include flexbox(
+    $direction: column,
+    $justify: space-evenly,
+    )
 }
