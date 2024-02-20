@@ -131,7 +131,7 @@ section.works {
   height: 22px;
   margin: 3px;
   padding: 6px 15px;
-  background-color: #E4DCDC;
+  background-color: #e4dcdc;
   color: white;
   font-weight: 600;
 }
@@ -139,7 +139,7 @@ section.works {
 footer {
   grid-row: 10/13;
   height: 160px;
-  color: #C1A8A8;
+  color: #c1a8a8;
   font-weight: 600;
   display: flex;
   flex-direction: column;
@@ -174,7 +174,8 @@ footer {
     font-weight: 550;
     align-self: center;
   }
-  header, .about-me,
+  header,
+  .about-me,
   section.works {
     width: 85%;
     max-width: 800px;
@@ -236,7 +237,8 @@ footer {
   .work {
     width: 100%;
   }
-  .about-me, section.works {
+  .about-me,
+  section.works {
     order: 0;
   }
 }/*# sourceMappingURL=index.css.map */

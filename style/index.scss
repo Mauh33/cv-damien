@@ -1,5 +1,4 @@
 @import "./variables";
-@import "./placeholders";
 @import "./mixins";
 
 *,
@@ -173,7 +172,8 @@ footer {
     align-self: center;
   }
 
-  header ,.about-me,
+  header,
+  .about-me,
   section.works {
     width: 85%;
     max-width: 800px;
@@ -213,7 +213,6 @@ footer {
 }
 
 @include from(xl) {
-
   header {
     width: 100%;
     max-width: 1277px;
@@ -249,7 +248,8 @@ footer {
     width: 100%;
   }
 
-  .about-me, section.works {
+  .about-me,
+  section.works {
     order: 0;
   }
 }
